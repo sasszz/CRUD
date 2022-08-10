@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Staatliches&display=swap');
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+.container {
+    color: white;
+    padding: 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    height: 100vh;
+    width: 50%;
+    background-color: rgba(0, 0, 255, 0.3);
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url('/static/imgs/pattern.jpg');
+    background-position: center center;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+}
+
+h1, h4, p {
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    width: 75%;
+}
+
+input[type=submit] {
+    width: 120px;
+}
+
+.formresponse {
+    margin-top: 30px;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
