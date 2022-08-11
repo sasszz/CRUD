@@ -19,16 +19,15 @@
 
 <body>
     <div class="container center">
-        <h1>Create User</h1>
-        <form action='/create/user' method='post'>
+        <h1>Edit User</h1>
+        <form action='/update/user' method='post'>
             <div class="vstack gap-3">
-                <input type="hidden" name="id" value="{{user.id}}">
                 <label for='first_name'>First Name:</label>
-                <input type='text' name='first_name'>
+                <input type='text' name='first_name' value="{{user.first_name}}">
                 <label for='last_name'>Last Name:</label>
-                <input type='text' name='last_name'>
+                <input type='text' name='last_name' value="{{user.last_name}}">
                 <label for='email'>Email:</label>
-                <input type='text' name='email'>
+                <input type='text' name='email' value="{{user.email}}">
                 <input type="submit" value="Create User">
             </div>
         </form>
