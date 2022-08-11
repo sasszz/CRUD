@@ -15,14 +15,7 @@ class User:
     # Now we use class methods to query our database
 
 
-    ## ! CREATE
-    @classmethod
-    def save(cls, data):
-        query = "INSERT INTO users (first_name, last_name, email) VALUES (%(first_name)s, %(last_name)s, %(email)s);"
-        return connectToMySQL(DATABASE).query_db(query, data)
-
-
-    ## ! READ/RETRIEVE 
+    ## ! READ ALL 
     @classmethod
     def get_all(cls):
         query = "SELECT * FROM users;"
@@ -32,22 +25,28 @@ class User:
             users.append( User(user) )
         return users
 
-    ## ! READ/RETRIEVE ONE
+    ## ! READ ONE
     @classmethod
     def get_one(cls, data):
         query = "SELECT * FROM users WHERE id = %(id)s;"
-        result = connectToMySQL(DATABASE).query_db(query)
+        result = connectToMySQL(DATABASE).query_db(query, data)
         user = User(result[0])
         return user
 
-    ## ! DELETE/DESTROY
+    ## ! CREATE
     @classmethod
-    def destroy(cls, data):
-        query = " DELETE FROM users WHERE id = %(id)s;"
+    def save(cls, data):
+        query = "INSERT INTO users (first_name, last_name, email) VALUES (%(first_name)s, %(last_name)s, %(email)s);"
         return connectToMySQL(DATABASE).query_db(query, data)
 
     ## ! UPDATE
     @classmethod
     def update (cls, data):
         query = "UPDATE users SET first_name = %(first_name)s, last_name = %(last_name)s, email = %(email)s WHERE id = %(id)s;"
+        return connectToMySQL(DATABASE).query_db(query, data)
+
+    ## ! DELETE/DESTROY
+    @classmethod
+    def destroy(cls, data):
+        query = " DELETE FROM users WHERE id = %(id)s;"
         return connectToMySQL(DATABASE).query_db(query, data)
