@@ -19,7 +19,7 @@
 
 <body>
     <div class="container center">
-        <h1>Edit User</h1>
+        <h1>Update Information</h1>
         <form action='/update/user' method='post'>
             <div class="vstack gap-3">
                 <input type="hidden" name="id" value="{{user.id}}">
@@ -29,7 +29,7 @@
                 <input type='text' name='last_name' value="{{user.last_name}}">
                 <label for='email'>Email:</label>
                 <input type='text' name='email' value="{{user.email}}">
-                <input type="submit" value="Edit User">
+                <input type="submit" value="Update">
             </div>
         </form>
     </div>

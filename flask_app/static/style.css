@@ -4,7 +4,38 @@ input[type=text]:focus {
     border: 3px solid #555;
 }
 
-.container {
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.col {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+a:hover {
+    padding: 5px;
+    color: black;
+    background-color: white;
+}
+
+li {
+    list-style: none;
+}
+
+.box {
     color: white;
     padding: 10px;
     padding-bottom: 30px;
@@ -23,13 +54,20 @@ body {
     background-color: #cccccc;
 }
 
+nav {
+    background-color: black;
+}
+
 h1, h4, p {
     text-align: center;
 }
 
 form {
     margin: 0 auto;
-    width: 75%;
+}
+
+input[type=text] {
+    width: 300px;
 }
 
 input[type=submit] {
@@ -41,6 +79,7 @@ input[type=submit] {
 }
 
 .center {
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
